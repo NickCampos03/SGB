@@ -1,9 +1,9 @@
 # Etapa 1: Build do frontend
 FROM node:18-alpine AS frontend-build
 WORKDIR /app/frontend
-COPY SGB---Frontend/sgb-web/sgb-web/Web/package*.json ./
+COPY SGB---Frontend/sgb-web/sgb-web/web/package*.json ./
 RUN npm install
-COPY SGB---Frontend/sgb-web/sgb-web/Web ./
+COPY SGB---Frontend/sgb-web/sgb-web/web ./
 RUN npm run build
 
 # Etapa 2: Build do backend
